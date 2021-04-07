@@ -4,7 +4,7 @@ Assignment task is available at task.md
 
 # Application running on Heroku
 
-https://24h-news-search-app.herokuapp.com/
+https://news-search-24h-app.herokuapp.com/
 
 ##
 

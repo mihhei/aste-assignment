@@ -8,7 +8,7 @@ export const Navbar = () => {
           className="nav-wrapper green darken-1"
           style={{ padding: '0 2rem' }}
         >
-          <span className="brand-logo">24h-news-search-app</span>
+          <span className="brand-logo">24h NEWS</span>
         </div>
       </nav>
     </div>
