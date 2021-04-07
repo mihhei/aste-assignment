@@ -6,7 +6,13 @@ export const Search = () => {
   const [query, setQuery] = useState('');
   const pressHandler = (event) => {
     if (event.key === 'Enter') {
-      history.push(`/search?query=${query}`);
+      const queryClean = query.trim();
+      if (queryClean) {
+        history.push(`/search?query=${queryClean}`);
+      } else {
+        window.M.toast({ html: 'Keyword is required!' });
+        history.push('/');
+      }
     }
   };
   return (
@@ -18,6 +24,7 @@ export const Search = () => {
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={pressHandler}
         placeholder="keyword"
+        required
       />
     </div>
   );

@@ -11,7 +11,7 @@ export const DataOutput = () => {
 
   const newSearchHandler = useCallback((event) => {
     if (event.key === 'Enter') {
-      setQuery(event.target.value);
+      setQuery(event.target.value.trim());
     }
   }, []);
   const getData = useCallback(async () => {
