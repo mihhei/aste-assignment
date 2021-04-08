@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const router = Router();
+const config = require('config');
 const axios = require('axios').default;
 const moment = require('moment');
 
@@ -26,7 +27,7 @@ async function getNewsApi(query, dataResponse, dayBefore) {
     url: 'https://newsapi.org/v2/everything',
     params: { q: query, from: dayBefore, language: 'en' },
     headers: {
-      'X-Api-Key': '0c73bfb343894b4fa9c230a39cb5ae73',
+      'X-Api-Key': config.get("newsApiKey"),
     },
   };
 
@@ -43,7 +44,7 @@ async function getNewsApi(query, dataResponse, dayBefore) {
 async function getGnews(query, dataResponse, dayBefore) {
   const options = {
     method: 'GET',
-    url: `https://gnews.io/api/v4/search?q=${query}&from=${dayBefore}&token=bcb0e45d30ba4d2a0c8f77d17c073dac`,
+    url: `https://gnews.io/api/v4/search?q=${query}&from=${dayBefore}&token=${config.get("gNewsKey")}`,
   };
 
   await axios
