@@ -6,13 +6,13 @@ import { About } from './components/about';
 export const useRoutes = () => {
   return (
     <Switch>
-      <Route path="/" exact>
+      <Route path="/about" exact>
         <About />
       </Route>
       <Route path="/search">
         <DataOutput />
       </Route>
-      <Redirect to="/" />
+      <Redirect to="/about" />
     </Switch>
   );
 };

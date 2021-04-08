@@ -11,7 +11,7 @@ export const Search = () => {
         history.push(`/search?query=${queryClean}`);
       } else {
         window.M.toast({ html: 'Keyword is required!' });
-        history.push('/');
+        history.push('/about');
       }
     }
   };
