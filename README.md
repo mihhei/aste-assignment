@@ -8,7 +8,7 @@ https://news-search-24h-app.herokuapp.com/
 
 ##
 
-Application generate news articles according to searching keyword and agregated by two different API.
+Application generate news articles from the last 24h according to searching keyword and produced by two different API.
 
 ###
 
